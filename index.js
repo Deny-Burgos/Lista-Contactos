@@ -9,6 +9,7 @@ let contactValidation = false;
 let phoneValidation = false;
 
 const validateInput = (input, isValidedRegex, texShow) => {
+    formBtn.disabled = contactValidation && phoneValidation ? false : true;
   if (input.value === "") {
     input.classList.remove("wrong", "correct");
     texShow.classList.remove("show");
@@ -23,13 +24,13 @@ const validateInput = (input, isValidedRegex, texShow) => {
   }
 };
 
-contactInput.addEventListener("input", (e) => {
+contactInput.addEventListener("input", e => {
   contactValidation = CONTACT_REGEX.test(contactInput.value);
   const texShow = form.children[1];
   validateInput(contactInput, contactValidation, texShow);
 });
 
-phoneInput.addEventListener("input", (e) => {
+phoneInput.addEventListener("input", e => {
   phoneValidation = PHONE_REGEX.test(phoneInput.value);
   const texShow = form.children[3];
   validateInput(phoneInput, phoneValidation, texShow);
