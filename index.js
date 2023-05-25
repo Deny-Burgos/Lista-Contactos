@@ -21,16 +21,16 @@ const validateInput = (input, isValidedRegex, texShow) => {
     input.classList.add("wrong");
     texShow.classList.add("show");
   }
-}
+};
 
 contactInput.addEventListener("input", (e) => {
   contactValidation = CONTACT_REGEX.test(contactInput.value);
   const texShow = form.children[1];
-    validateInput(contactInput, contactValidation, texShow)
+  validateInput(contactInput, contactValidation, texShow);
 });
 
 phoneInput.addEventListener("input", (e) => {
-    phoneValidation = PHONE_REGEX.test(phoneInput.value);
-    const texShow = form.children[3];
-      validateInput(phoneInput, phoneValidation, texShow)
-  });
+  phoneValidation = PHONE_REGEX.test(phoneInput.value);
+  const texShow = form.children[3];
+  validateInput(phoneInput, phoneValidation, texShow);
+});
