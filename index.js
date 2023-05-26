@@ -74,7 +74,8 @@ list.addEventListener("click", (e) => {
       isValidatePhone = PHONE_REGEX.test(editInput2.value);
       validateInput(editInput2, isValidatePhone);
     });
-    if (editIcon.classList.contains("editando") && isValidateName ||
+    if (
+      (editIcon.classList.contains("editando") && isValidateName) ||
       isValidatePhone
     ) {
       editIcon.classList.remove("editando");
@@ -84,6 +85,8 @@ list.addEventListener("click", (e) => {
       editInput2.setAttribute("value", editInput2.value);
       editInput2.setAttribute("readonly", "true");
       editInput2.classList.remove("editing");
+      editInput.classList.remove("correct");
+      editInput2.classList.remove("correct");
       localStorage.setItem("listaContactos", list.innerHTML);
       isValidateName = false;
       isValidatePhone = false;
