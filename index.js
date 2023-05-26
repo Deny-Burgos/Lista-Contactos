@@ -66,7 +66,6 @@ list.addEventListener("click", (e) => {
     const editIcon = e.target.closest(".edit-btn");
     const editInput = editIcon.parentElement.children[0];
     const editInput2 = editIcon.parentElement.children[1];
-
     editInput.addEventListener("input", (e) => {
       isValidateName = CONTACT_REGEX.test(editInput.value);
       validateInput(editInput, isValidateName);
@@ -75,8 +74,7 @@ list.addEventListener("click", (e) => {
       isValidatePhone = PHONE_REGEX.test(editInput2.value);
       validateInput(editInput2, isValidatePhone);
     });
-    if (
-      (editIcon.classList.contains("editando") && isValidateName) ||
+    if (editIcon.classList.contains("editando") && isValidateName ||
       isValidatePhone
     ) {
       editIcon.classList.remove("editando");
@@ -87,7 +85,8 @@ list.addEventListener("click", (e) => {
       editInput2.setAttribute("readonly", "true");
       editInput2.classList.remove("editing");
       localStorage.setItem("listaContactos", list.innerHTML);
-      console.log(isValidatePhone);
+      isValidateName = false;
+      isValidatePhone = false;
     } else {
       editIcon.classList.add("editando");
       editInput.removeAttribute("readonly");
