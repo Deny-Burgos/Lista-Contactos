@@ -7,6 +7,8 @@ const PHONE_REGEX = /^[0](412|414|416|426|424|212)[0-9]{7}$/;
 const CONTACT_REGEX = /^[A-ZÑ][a-zñ]{2,} [A-ZÑ][a-zñ]{4,16}$/;
 let contactValidation = false;
 let phoneValidation = false;
+const menuIcon = document.querySelector("#bars-icon");
+const MenuContainer = document.querySelector(".menu-container");
 
 const validateInput = (input, isValidedRegex, texShow) => {
   formBtn.disabled = contactValidation && phoneValidation ? false : true;
@@ -109,6 +111,9 @@ list.addEventListener("click", (e) => {
             `;
     }
   }
+});
+menuIcon.addEventListener("click", (e) => {
+  MenuContainer.classList.toggle("show-menu");
 });
 
 (() => {
