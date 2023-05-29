@@ -78,9 +78,7 @@ list.addEventListener("click", (e) => {
       isValidatePhone = PHONE_REGEX.test(editInput2.value);
       validateInput(editInput2, isValidatePhone);
     });
-    if (
-      (editIcon.classList.contains("editando") && isValidateName) ||
-      isValidatePhone
+    if (editIcon.classList.contains("editando") && isValidateName && isValidatePhone
     ) {
       editIcon.classList.remove("editando");
       editInput.setAttribute("value", editInput.value);
