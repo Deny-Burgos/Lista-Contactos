@@ -62,6 +62,7 @@ form.addEventListener("submit", (e) => {
   formBtn.disabled = true;
   localStorage.setItem("listaContactos", list.innerHTML);
 });
+
 list.addEventListener("click", (e) => {
   if (e.target.closest(".delete-btn")) {
     e.target.closest(".delete-btn").parentElement.remove();
