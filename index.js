@@ -69,7 +69,7 @@ list.addEventListener("click", (e) => {
     localStorage.setItem("listaContactos", list.innerHTML);
   }
   if (e.target.closest(".edit-btn")) {
-    let editIcon = e.target.closest(".edit-btn");
+    const editIcon = e.target.closest(".edit-btn");
     const editInput = editIcon.parentElement.children[0];
     const editInput2 = editIcon.parentElement.children[1];
     editInput.addEventListener("input", (e) => {
