@@ -1,48 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Inicio Sesion</title>
 </head>
 <body>
-    <nav id="navbar">
-        <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="logo">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-          </svg>
-          </a>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="bars-icon">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-          <div id="links-container">
-            <a class="link" href="https://www.google.co.ve/?hl=es" target="_blank" rel="noopener noreferrer">Google</a>
-            <a class="link" href="https://github.com/Deny-Burgos" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="link" href="index.html" target="_blank" rel="noopener noreferrer">App</a>
-          </div>
-    </nav>
-    <main id="main-container">
-        <div class="menu-container">
-          <ul id="list-menu">
-              <li><a class="link-menu" href="https://www.google.co.ve/?hl=es" target="_blank" rel="noopener noreferrer">Google</a></li>
-              <li><a class="link-menu" href="https://github.com/Deny-Burgos" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a class="link-menu" href="index.html" target="_blank" rel="noopener noreferrer">App</a></li>
-          </ul>
-            </div>
-        <!-- nombre y apelido, numero telefonico -->
-        <h1>Lista De Contactos </h1>
-        <form id="form">
-            <input type="text" id="contact-input" placeholder="Nombre y Apellido" autocomplete="off">
-            <p class="text-form">Primera letra en mayusculas en Nombre y Apellido</p>
-            <input type="text" id="phone-input" placeholder="Numero Telefonico" autocomplete="off">
-            <p class="text-form">Debe ser numero Venezolano<br>Ej:02121564131</p>
-            <button id="form-btn"disabled>Agregar</button>
-        </form>
-        <!-- La Lista de contactos guardados  -->
-            <ul id="list" class="style-1">
-            </ul>
-    </main>
-    <script src="index.js"></script>
+  <p class="notification"></p>
+  <div id="container">
+    <h1 id="form-title">Iniciar sesión</h1>
+    <form id="form-login">
+      <input type="text" id="login-input" class="form-input" autocomplete="off" placeholder="Ingresar usuario">
+      <button class="form-btn" type="submit">Ingresar</button>
+    </form>
+    <form id="form-create">
+      <input type="text" id="create-input" class="form-input" autocomplete="off" placeholder="Usuario">
+      <button class="form-btn" type="submit">Crear usuario</button>
+    </form>
+  </div>
+  <script src="index.js"></script>
 </body>
 </html>
