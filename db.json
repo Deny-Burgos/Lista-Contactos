@@ -3,7 +3,24 @@
     {
       "username": "Deny",
       "id": 1
+    },
+    {
+      "username": "Gabriel",
+      "id": 2
     }
   ],
-  "agenda": []
+  "agenda": [
+    {
+      "contact": "Dne Bndndn",
+      "phone": "02122555454",
+      "user": "Deny",
+      "id": 1
+    },
+    {
+      "contact": "Dnnnn Dnnnnaaaww",
+      "phone": "02125558874",
+      "user": "Deny",
+      "id": 2
+    }
+  ]
 }

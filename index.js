@@ -18,7 +18,7 @@ formLogin.addEventListener("submit",async e =>{
             notification.classList.remove("show-notification");
         }, 3000);
     } else {
-        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify(user));
         window.location.href = 'Agenda/index.html';
     }
 });
