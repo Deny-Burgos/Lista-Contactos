@@ -13,7 +13,7 @@ const menuIcon = document.querySelector("#bars-icon");
 const MenuContainer = document.querySelector(".menu-container");
 const editBtn = document.querySelector("#edit-btn");
 const user = JSON.parse(localStorage.getItem('users'));
-const exitBtn = document.querySelector(".exit-icon")
+const exitBtn = document.querySelectorAll(".exit-icon");
 console.log(user);
 
 (()=>{
@@ -155,10 +155,12 @@ list.addEventListener("click",async (e) => {
   }
 });
 // para cerrar sesion 
-exitBtn.addEventListener("click",async (e) => {
-  localStorage.removeItem('users');
-  window.location.href = `../index.html`;
-});
+exitBtn.forEach(element => {
+  element.addEventListener("click",async (e) => {
+    localStorage.removeItem('users');
+    window.location.href = `../index.html`;
+  });
+})
 // menu movil 
 menuIcon.addEventListener("click", (e) => {
   MenuContainer.classList.toggle("show-menu");
